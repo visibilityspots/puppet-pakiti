@@ -1,0 +1,49 @@
+# Configuration file for Pakiti.
+#
+# This file is managed by PUPPET
+
+# Pakiti servers, use space as delimiter
+# Exmaple: servers_name = pakiti1.server.com:443 pakiti2.server.com:8443
+servers_name = <%= scope.lookupvar('pakiti::servers_name') %>
+
+# URL of Pakiti script on the server, default /feed/
+server_url = <%= scope.lookupvar('pakiti::server_url') %>
+
+# CA Path, where is located certificate of the CA which issued SSL certificate for the Pakiti server
+#ca_certificate = /etc/ssl/certs
+#ca_certificate = /etc/grid-security/certificates
+
+# The client certificate and the key
+#host_cert = /etc/ssl/host.pem
+
+# Connection method: 'curl' or 'openssl' (default) or 'stdout'
+#connection_method = curl
+
+# OpenSSL binary, with the options you like, by default openssl is located by
+# command which
+#openssl_path = /usr/bin/openssl
+
+# Curl binary, with the options you like, by default curl is located by
+# command which
+#curl_path = /usr/bin/curl
+
+# Put something small that can identify your site/host/team, without spaces.
+tag = <%= scope.lookupvar('pakiti::server_tag') %>
+
+# Does the client should report back the list of packages needs upgrade?
+# (default 0 - off)
+# report = 0
+
+# If the pakiti client works as a proxy. It can send results to the server on
+# behalf of other pakiti client. Pakiti client can produce results to the
+# stdout, these results can be passed to the proxy pakiti client over the stdin.
+# The host, which runs proxy pakiti client has to be listed in the Pakiti
+# server configuration file in section: trusted_proxy_clients 
+# (default 0 - off)
+# is_proxy = 0
+
+# If the host has more then one interface, it can be setup which is used for outgoing communication, 
+# for example: eth0 or IP address
+# Warning: This option works only with curl connection method
+# (default "")
+# interface =
