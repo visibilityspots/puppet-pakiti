@@ -25,7 +25,7 @@ server_url = <%= scope.lookupvar('pakiti::server_url') %>
 
 # Curl binary, with the options you like, by default curl is located by
 # command which
-#curl_path = /usr/bin/curl
+curl_path = <%= scope.lookupvar('pakiti::server_curl') %>
 
 # Put something small that can identify your site/host/team, without spaces.
 tag = <%= scope.lookupvar('pakiti::server_tag') %>

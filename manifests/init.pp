@@ -9,6 +9,7 @@ class pakiti (
 
   $servers_name     = $pakiti::params::servers_name,
   $server_url       = $pakiti::params::server_url,
+  $server_curl      = $pakiti::params::server_curl,
   $server_tag       = $pakiti::params::server_tag,
 
   $server_hostname  = $pakiti::params::server_hostname,
