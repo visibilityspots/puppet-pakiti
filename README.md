@@ -50,4 +50,4 @@ https://github.com/arioch/puppet-percona
 	[Web interface]
 	$server_web_url   = url of the local pakiti server,
 	$server_web_title = the name of your organisation
-```puppet
+```
