@@ -12,8 +12,9 @@ you could use for example:
 
 https://github.com/arioch/puppet-percona
 
+```puppet
 
-   percona::database {
+  percona::database {
      'pakiti2':;
    }
 
@@ -23,27 +24,30 @@ https://github.com/arioch/puppet-percona
        user     => 'pakiti',
        password => 'password',
    }
+```
 
 # Options
 
-$motd             = defaults to false,
-(enable when you use the puppet-motd module)
+```puppet 
+	$motd             = defaults to false,
+	(enable when you use the puppet-motd module)
 
-$client           = defaults to true,
-$server           = defaults to false,
+	$client           = defaults to true,
+	$server           = defaults to false,
 
-[Client configuration]
-$servers_name     = the server to report to,
-$server_url       = url of pakiti script on server, defaults to /feed/,
-$server_curl	  = path to curl command,
-$server_tag       = the identifier,
+	[Client configuration]
+	$servers_name     = the server to report to,
+	$server_url       = url of pakiti script on server, defaults to /feed/,
+	$server_curl	  = path to curl command,
+	$server_tag       = the identifier,
 
-[Server configuration]
-$server_hostname  = database server hostname, defaults to localhost,
-$server_dbname    = database name, defaults to pakiti,
-$server_username  = database username, default to pakiti_server,
-$server_password  = database password, defaults to mysql_password,
+	[Server configuration]
+	$server_hostname  = database server hostname, defaults to localhost,
+	$server_dbname    = database name, defaults to pakiti,
+	$server_username  = database username, default to pakiti_server,
+	$server_password  = database password, defaults to mysql_password,
 
-[Web interface]
-$server_web_url   = url of the local pakiti server,
-$server_web_title = the name of your organisation
+	[Web interface]
+	$server_web_url   = url of the local pakiti server,
+	$server_web_title = the name of your organisation
+```puppet
