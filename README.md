@@ -1,6 +1,28 @@
-A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net)
+= A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net) =
 
-Options:
+The pakiti packages needs to be uploaded to an avaible repository so the machines can install them
+
+= Tested on centos 6.5.=
+
+= Needs a mysql database =
+
+you could use for example:
+
+https://github.com/arioch/puppet-percona
+
+
+   percona::database {
+     'pakiti2':;
+   }
+
+   percona::rights {
+     'pakiti@localhost/pakiti2':
+       database => 'pakiti2',
+       user     => 'pakiti',
+       password => 'password',
+   }
+
+= Options =
 
 $motd             = defaults to false,
 (enable when you use the puppet-motd module)
