@@ -1,10 +1,12 @@
-= A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net) =
+# Puppet pakiti
+
+A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net)
 
 The pakiti packages needs to be uploaded to an avaible repository so the machines can install them
 
-= Tested on centos 6.5.=
+## Tested on centos 6.5
 
-= Needs a mysql database =
+## Needs a mysql database
 
 you could use for example:
 
@@ -22,7 +24,7 @@ https://github.com/arioch/puppet-percona
        password => 'password',
    }
 
-= Options =
+# Options
 
 $motd             = defaults to false,
 (enable when you use the puppet-motd module)
@@ -33,6 +35,7 @@ $server           = defaults to false,
 [Client configuration]
 $servers_name     = the server to report to,
 $server_url       = url of pakiti script on server, defaults to /feed/,
+$server_curl	  = path to curl command,
 $server_tag       = the identifier,
 
 [Server configuration]
