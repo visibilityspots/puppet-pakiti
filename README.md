@@ -28,7 +28,7 @@ https://github.com/arioch/puppet-percona
 
 # Options
 
-```puppet 
+```puppet
 	$motd             = defaults to false,
 	(enable when you use the puppet-motd module)
 
