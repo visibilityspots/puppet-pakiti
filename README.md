@@ -1,5 +1,7 @@
 # Puppet pakiti
 
+[![Build Status](https://travis-ci.org/visibilityspots/puppet-pakiti.png)](https://travis-ci.org/visibilityspots/puppet-pakiti)
+
 A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net)
 
 The pakiti packages needs to be uploaded to an avaible repository so the machines can install them
