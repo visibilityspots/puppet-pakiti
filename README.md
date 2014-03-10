@@ -41,25 +41,26 @@ you could use for example https://github.com/arioch/puppet-percona
 	$server_web_title = the name of your organisation
 ```
 
-## Server example (in combination with the percona module)
+## Server example
+(in combination with the percona module)
 
 ```puppet
 node 'pakiti-server' {
   class {
     'percona':
-    	server => true;
+      server => true;
 
     'pakiti':
-    	server   => true,
-	server_dbname    => 'pakiti2',
-	server_username  => 'pakiti',
-	server_password  => 'password',
-	server_web_url   => $::fqdn,
-	server_web_title => 'Pakiti service';
+      server           => true,
+      server_dbname    => 'pakiti2',
+      server_username  => 'pakiti',
+      server_password  => 'password',
+      server_web_url   => $::fqdn,
+      server_web_title => 'Pakiti service';
   }
 
   percona::database {
-     'pakiti2':;
+    'pakiti2':;
   }
 
   percona::rights {
