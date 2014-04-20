@@ -4,12 +4,17 @@
 
 A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net)
 
-The pakiti packages needs to be uploaded to an avaible repository so the puppet module can install them
+The pakiti packages needs to be uploaded to an avaible repository so the puppet module can install them.
+
+You could use for example my [package.io](https://packagecloud.io/visibilityspots/packages) repository which you can install on CentOS by:
+
+```bash
+$ curl https://packagecloud.io/install/repositories/visibilityspots/packages/script.rpm | sudo bash
+```
 
 ## Requirements
 
 Tested on centos 6.5, ruby-1.8.x and puppet 3.4.x
-
 
 The pakiti server needs a mysql database
 
