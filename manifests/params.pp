@@ -11,7 +11,7 @@ class pakiti::params {
   $servers_name     = 'pakiti.server.com:443'
   $server_url       = '/feed/'
   $server_curl      = 'curl'
-  $server_tag       = 'TEST'
+  $server_tag       = $::environment
 
   $server_hostname  = 'localhost'
   $server_dbname    = 'pakiti'
