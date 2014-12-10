@@ -9,7 +9,7 @@ env:
 
 script:
   - url -s https://raw.githubusercontent.com/visibilityspots/jenkins-scripts/master/puppet/package-puppet-module.sh | bash -s pakiti development
-  - package_cloud push visibilityspots/puppet-modules/ *.rpm
+  - package_cloud push visibilityspots/puppet-modules/el/6 *.rpm
 
 notifications:
   email:
