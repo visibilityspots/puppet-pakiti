@@ -8,7 +8,7 @@ env:
   - PUPPET_VERSION=3.7.3
 
 script:
-  - url -s https://raw.githubusercontent.com/visibilityspots/jenkins-scripts/master/puppet/package-puppet-module.sh | bash -s pakiti development
+  - curl -s https://raw.githubusercontent.com/visibilityspots/jenkins-scripts/master/puppet/package-puppet-module.sh | bash -s pakiti development
   - package_cloud push visibilityspots/puppet-modules/el/6 *.rpm
 
 notifications:
