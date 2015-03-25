@@ -19,7 +19,6 @@ class pakiti (
 
   $server_web_url   = $pakiti::params::server_web_url,
   $server_web_title = $pakiti::params::server_web_title,
-
 ) inherits pakiti::params {
 
   if $motd {
