@@ -1,6 +1,4 @@
-# puppet-pakiti module
-
-[![Build Status](https://travis-ci.org/visibilityspots/puppet-pakiti.png)](https://travis-ci.org/visibilityspots/puppet-pakiti)
+# puppet-pakiti module [![Build Status](https://travis-ci.org/visibilityspots/puppet-pakiti.png)](https://travis-ci.org/visibilityspots/puppet-pakiti)
 
 A puppet-module which configures the pakiti service (http://pakiti.sourceforge.net)
 
