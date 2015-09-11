@@ -17,7 +17,7 @@ server_url = <%= scope.lookupvar('pakiti::server_url') %>
 #host_cert = /etc/ssl/host.pem
 
 # Connection method: 'curl' or 'openssl' (default) or 'stdout'
-#connection_method = curl
+connection_method = <%= scope.lookupvar('pakiti::connection_method') %>
 
 # OpenSSL binary, with the options you like, by default openssl is located by
 # command which
