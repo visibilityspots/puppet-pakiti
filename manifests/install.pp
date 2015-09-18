@@ -5,7 +5,7 @@ class pakiti::install {
 
   if $pakiti::client {
     package { 'pakiti-client':
-      ensure => 'installed';
+      ensure => $pakiti::client_ensure;
     }
   }
 

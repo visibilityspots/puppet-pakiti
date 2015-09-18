@@ -20,6 +20,7 @@ class pakiti (
   $server_web_url    = $pakiti::params::server_web_url,
   $server_web_title  = $pakiti::params::server_web_title,
   $connection_method = $pakiti::params::connection_method,
+  $client_ensure     = $pakiti::params::client_ensure,
 ) inherits pakiti::params {
 
   if $motd {

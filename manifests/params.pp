@@ -22,4 +22,5 @@ class pakiti::params {
   $server_web_title  = 'My_Organization'
 
   $connection_method = 'curl'
+  $client_ensure     = 'installed'
 }
