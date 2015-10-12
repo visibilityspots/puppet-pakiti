@@ -21,8 +21,8 @@ class pakiti::config {
     }
 
     exec { 'fill-tables':
-      command => "/usr/bin/mysql -u ${pakiti::server_username} -p${pakiti::server_password} -h ${pakiti::server_hostname} ${pakiti::server_dbname} < /usr/share/doc/pakiti-server-*/pakiti2.sql",
-      onlyif  => "/usr/bin/mysql -u ${pakiti::server_username} -p${pakiti::server_password} -h ${pakiti::server_hostname} ${pakiti::server_dbname} -e=\"SELECT 1 FROM arch LIMIT 1;\""
+      command => "/usr/bin/mysql -u ${pakiti::server_username} -p${pakiti::server_password} -h ${pakiti::server_hostname} ${pakiti::server_dbname} < $(ls /usr/share/doc/pakiti-server-*/pakiti2.sql)",
+      unless  => "/usr/bin/mysql -u ${pakiti::server_username} -p${pakiti::server_password} -h ${pakiti::server_hostname} ${pakiti::server_dbname} -e \"SELECT 1 FROM arch LIMIT 1;\""
     }
   }
 }
