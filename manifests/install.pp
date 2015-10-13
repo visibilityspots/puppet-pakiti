@@ -14,4 +14,8 @@ class pakiti::install {
       ensure => 'installed';
     }
   }
+  
+  file { '/etc/pakiti':
+    ensure => 'directory',
+  }
 }
